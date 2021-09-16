@@ -6,6 +6,7 @@
 - npm, Node.jsを利用して実装しました
 
 ## 操作手順
+- node modulesはファイル数が多かったためzip化しています。
 - ターミナルでnpm run devStartとコマンドを打って、サーバーを起動させる
 - localhost:3000 を開く
 - タイトル、日付、Agenda、Todo、Decisionを記入する
