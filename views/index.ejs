@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send To Notion</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container my-4">
+        <h1><img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png" style="width: 10%;"> Send To Notion</h1>
+        <form action="/send-notion" method="POST" class="border-bottom">
+            <div class="row" >
+                <div class="col-12 col-md mb-3">
+                    <label for="title">Title</label>
+                    <input type="text" name="title" id="title" required class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="date">CreatedDate</label>
+                    <input type="date" name="date" id="date" class="form-control">
+                </div>
+            </div>
+                <div class="mb-3">
+                    <label for="agenda">Agenda</label>
+                    <textarea name="agenda" id="agenda" max-length = "500" class="form-control"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="todo">Todo</label>
+                    <textarea name="todo" id="todo" max-length = "500" class="form-control"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="todo">Decision</label>
+                    <textarea name="decision" id="decision" max-length = "500" class="form-control"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary mb-3">Send To Notion</button>
+         </form>
+    </div>
+    <script>
+
+//日付をセット
+  function setInitialDate(){
+  let today = new Date();
+  let inityear = today.getFullYear(); 
+  let initmonth = ("0"+(today.getMonth()+1)).slice(-2);
+  let initday = ("0"+(today.getDate())).slice(-2);
+  // 日付を書き換える
+  document.getElementById("date").value = `${inityear}-${initmonth}-${initday}`;
+  }
+  
+  setInitialDate();
+</script>
+</body>
+</html>
