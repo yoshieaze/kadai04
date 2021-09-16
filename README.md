@@ -7,6 +7,7 @@
 
 ## 操作手順
 - node modulesはファイル数が多かったためzip化しています。
+- .envとして利用するポートなどをまとめていますが、あげられなかったため、Slackの方に記載します
 - ターミナルでnpm run devStartとコマンドを打って、サーバーを起動させる
 - localhost:3000 を開く
 - タイトル、日付、Agenda、Todo、Decisionを記入する
